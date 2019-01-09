@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BBg-6h-8xP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SWAG STORE-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CategoriesVC" customModule="swag_catalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BAs-k4-SyR"/>
+                        <viewControllerLayoutGuide type="bottom" id="LL6-C9-MTu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP BY CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxF-C8-b87">
+                                <rect key="frame" x="16" y="25" width="165" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgZ-Em-dhf">
+                                <rect key="frame" x="0.0" y="65" width="375" height="538"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="2yh-a7-NT2">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2yh-a7-NT2" id="iul-dd-4aB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="SeP-oD-KhP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIGITAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEa-ou-WD6">
+                                                    <rect key="frame" x="120.5" y="53.5" width="134" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="134" id="WEn-2m-cIg"/>
+                                                        <constraint firstAttribute="height" constant="32" id="nE7-v3-GIQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SeP-oD-KhP" firstAttribute="leading" secondItem="iul-dd-4aB" secondAttribute="leading" id="0hW-iH-YOn"/>
+                                                <constraint firstItem="SeP-oD-KhP" firstAttribute="top" secondItem="iul-dd-4aB" secondAttribute="top" id="3AO-qz-RiN"/>
+                                                <constraint firstAttribute="trailing" secondItem="SeP-oD-KhP" secondAttribute="trailing" id="9Se-6q-IIM"/>
+                                                <constraint firstAttribute="bottom" secondItem="SeP-oD-KhP" secondAttribute="bottom" id="Hpm-33-dD9"/>
+                                                <constraint firstItem="iEa-ou-WD6" firstAttribute="centerY" secondItem="iul-dd-4aB" secondAttribute="centerY" id="MOd-sX-6qj"/>
+                                                <constraint firstItem="iEa-ou-WD6" firstAttribute="centerX" secondItem="iul-dd-4aB" secondAttribute="centerX" id="c3C-n0-zRt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bgZ-Em-dhf" firstAttribute="top" secondItem="CxF-C8-b87" secondAttribute="bottom" constant="16" id="5Ul-YH-EGI"/>
+                            <constraint firstItem="bgZ-Em-dhf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AbX-1h-5pd"/>
+                            <constraint firstItem="CxF-C8-b87" firstAttribute="top" secondItem="BAs-k4-SyR" secondAttribute="bottom" constant="25" id="I76-4P-6CH"/>
+                            <constraint firstItem="LL6-C9-MTu" firstAttribute="top" secondItem="bgZ-Em-dhf" secondAttribute="bottom" id="LsW-cd-cxx"/>
+                            <constraint firstItem="CxF-C8-b87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SJ1-wn-NXV"/>
+                            <constraint firstAttribute="trailing" secondItem="bgZ-Em-dhf" secondAttribute="trailing" id="tmq-o8-2da"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SWAG STORE" id="pmE-7O-Pgm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="792.95352323838085"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uoV-95-5yQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BBg-6h-8xP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="g1w-Zc-4Vw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3411764706" green="0.1529411765" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h6E-3X-Ce7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYa-6w-I1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="digital" width="1024" height="703"/>
+    </resources>
+</document>

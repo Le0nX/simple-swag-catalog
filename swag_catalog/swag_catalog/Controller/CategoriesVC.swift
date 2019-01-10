@@ -34,5 +34,25 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
 
+    /* TAPPED THE ROW IN TABBLE */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category) // goto next screeen
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // where we want to go?
+        if let productsVC = segue.destination as? ProductsVC {
+            
+            // change a button for the next VC (we need to create a new one and replace an old one)
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
+            assert(sender as? Category != nil)
+            productsVC.initProducts(category: sender as! Category)
+            
+        }
+    }
 }
 

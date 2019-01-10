@@ -81,17 +81,17 @@
                     <navigationItem key="navigationItem" title="SWAG STORE" id="pmE-7O-Pgm"/>
                     <connections>
                         <outlet property="categoryTable" destination="bgZ-Em-dhf" id="cT0-MF-guM"/>
-                        <segue destination="FtO-VH-fs2" kind="show" id="G3X-v0-Jh7"/>
+                        <segue destination="FtO-VH-fs2" kind="show" identifier="ProductsVC" id="G3X-v0-Jh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="792.95352323838085"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="0Er-AU-ObD">
             <objects>
-                <viewController id="FtO-VH-fs2" sceneMemberID="viewController">
+                <viewController id="FtO-VH-fs2" customClass="ProductsVC" customModule="swag_catalog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AOZ-TM-x0m"/>
                         <viewControllerLayoutGuide type="bottom" id="CtG-qu-GE8"/>
@@ -116,7 +116,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QfO-qp-1ES" customClass="ProductCell" customModule="swag_catalog" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="QfO-qp-1ES" customClass="ProductCell" customModule="swag_catalog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="258"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -178,6 +178,9 @@
                             <constraint firstAttribute="trailing" secondItem="fr1-Lf-fXD" secondAttribute="trailing" id="moP-Tm-bBd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productCollection" destination="fr1-Lf-fXD" id="xaK-sM-qAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qq8-Oc-igy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
